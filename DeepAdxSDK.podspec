@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
   spec.homepage     = "https://deepadx.com"
 
   spec.author       = { "deepadx" => "ads@deepadx.com" }
-  spec.source       = { :git => "https://gitee.com/deepad/deepadx-ios-sdk.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/xrthinking/DeepAdxSDK.git", :tag => "#{spec.version}" }
   
   spec.user_target_xcconfig = { 'OTHER_LDFLAGS' => ['-ObjC'], 'ENABLE_BITCODE' => 'NO' }
   spec.pod_target_xcconfig  = { 'ENABLE_BITCODE' => 'NO' }
