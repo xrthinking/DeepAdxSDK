@@ -8,7 +8,7 @@ workspace 'DeepAdxDebug.xcworkspace'
 
 # true：使用仓库根目录本地 DeepAdxSDK（改 podspec / xcframework 后 pod install 即测）
 # false：使用 CocoaPods 已发布版本（与线上接入一致）
-USE_LOCAL_DEEPADX_SDK = true
+USE_LOCAL_DEEPADX_SDK = false
 
 deepadx_sdk_version = '1.0.7'
 deepadx_subspecs = ['Core', 'CSJ', 'GDT', 'KS', 'BD', 'GG', 'PAG']

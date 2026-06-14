@@ -42,8 +42,8 @@
 //#endif
     // 国内测试：a06460e31fce62fa
     // 国外测试：e3aa00b33d0927ec
-    // 依然在线-iOS(国内)：1375ce71c7894b24
-    // 依然在线-iOS(海外)：6b1c8048fdc01e0b
+    // 正式-iOS(国内)：1375ce71c7894b24
+    // 正式-iOS(海外)：6b1c8048fdc01e0b
     [[DeepAdxSdkConfig shareInstance] registerAppID:@"a06460e31fce62fa" withConfig:model];
 }
 
