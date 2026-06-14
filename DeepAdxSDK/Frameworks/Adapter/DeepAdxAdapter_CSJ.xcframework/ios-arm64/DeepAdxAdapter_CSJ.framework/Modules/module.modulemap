@@ -1,0 +1,6 @@
+framework module DeepAdxAdapter_CSJ {
+  umbrella header "DeepAdxAdapter_CSJ.h"
+  export *
+
+  module * { export * }
+}

@@ -1,0 +1,15 @@
+//
+//  DeepAdxGdtSplashAdapter.h
+//
+
+#import <DeepAdxAdspot/DeepAdxSplashDelegate.h>
+#import <DeepAdxCore/DeepAdxBaseAdPosition.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface DeepAdxGdtSplashAdapter : DeepAdxBaseAdPosition
+@property (nonatomic, weak) id<DeepAdxSplashDelegate> delegate;
+
+@end
+
+NS_ASSUME_NONNULL_END

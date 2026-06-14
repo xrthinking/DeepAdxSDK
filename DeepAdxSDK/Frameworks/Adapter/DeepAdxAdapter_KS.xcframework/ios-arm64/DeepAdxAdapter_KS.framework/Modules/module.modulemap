@@ -1,0 +1,6 @@
+framework module DeepAdxAdapter_KS {
+  umbrella header "DeepAdxAdapter_KS.h"
+  export *
+
+  module * { export * }
+}

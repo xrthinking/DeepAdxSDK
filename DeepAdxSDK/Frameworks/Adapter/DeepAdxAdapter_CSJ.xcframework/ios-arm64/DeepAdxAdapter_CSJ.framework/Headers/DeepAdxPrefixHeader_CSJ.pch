@@ -1,0 +1,13 @@
+//
+//  PrefixHeader_Adapter.pch
+//  DeepAdxAdapter
+//
+//  Created by cc on 2022/4/7.
+//
+
+#ifndef PrefixHeader_Adapter_pch
+#define PrefixHeader_Adapter_pch
+
+#import "DeepAdxAdapter_CSJ.h"
+
+#endif /* PrefixHeader_Adapter_pch */

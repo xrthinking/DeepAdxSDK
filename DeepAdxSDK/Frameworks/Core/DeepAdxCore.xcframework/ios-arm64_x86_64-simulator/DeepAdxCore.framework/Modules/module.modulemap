@@ -1,0 +1,6 @@
+framework module DeepAdxCore {
+  umbrella header "DeepAdxCore.h"
+  export *
+
+  module * { export * }
+}

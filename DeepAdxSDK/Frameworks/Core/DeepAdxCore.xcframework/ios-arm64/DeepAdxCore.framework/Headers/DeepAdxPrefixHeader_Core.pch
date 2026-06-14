@@ -1,0 +1,13 @@
+//
+//  DeepAdxPrefixHeader_Core.pch
+//  DeepAdxCore
+//
+//  Created by cc on 2022/3/28.
+//
+
+#ifndef DeepAdxPrefixHeader_Core_pch
+#define DeepAdxPrefixHeader_Core_pch
+
+#import "DeepAdxCore.h"
+
+#endif /* DeepAdxPrefixHeader_Core_pch */

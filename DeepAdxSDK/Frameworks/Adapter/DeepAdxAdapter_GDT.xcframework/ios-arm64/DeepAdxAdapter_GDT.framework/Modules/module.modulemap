@@ -1,0 +1,6 @@
+framework module DeepAdxAdapter_GDT {
+  umbrella header "DeepAdxAdapter_GDT.h"
+  export *
+
+  module * { export * }
+}

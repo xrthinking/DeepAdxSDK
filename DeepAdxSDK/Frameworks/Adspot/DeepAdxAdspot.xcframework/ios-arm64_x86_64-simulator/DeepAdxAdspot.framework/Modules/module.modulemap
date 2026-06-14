@@ -1,0 +1,6 @@
+framework module DeepAdxAdspot {
+  umbrella header "DeepAdxAdspot.h"
+  export *
+
+  module * { export * }
+}

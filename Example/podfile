@@ -1,0 +1,59 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '12.0'
+
+# 使用 CocoaPods 官方源（默认 CDN 即可拉取已发布的 DeepAdxSDK）
+# source 'https://cdn.cocoapods.org/'
+
+workspace 'DeepAdxDebug.xcworkspace'
+
+# true：使用仓库根目录本地 DeepAdxSDK（改 podspec / xcframework 后 pod install 即测）
+# false：使用 CocoaPods 已发布版本（与线上接入一致）
+USE_LOCAL_DEEPADX_SDK = true
+
+deepadx_sdk_version = '2.0.1'
+deepadx_subspecs = ['Core', 'CSJ', 'GDT', 'KS', 'BD', 'GG', 'PAG']
+
+# swift demo
+target 'DeepAdxSwift' do
+  use_frameworks!
+  project 'DeepAdxSwift/DeepAdxSwift.xcodeproj'
+
+  pod 'Masonry', '~> 1.1.0'
+
+  if USE_LOCAL_DEEPADX_SDK
+    pod 'DeepAdxSDK', :path => '../', :subspecs => deepadx_subspecs
+  else
+    pod 'DeepAdxSDK', deepadx_sdk_version, :subspecs => deepadx_subspecs
+  end
+
+  pod 'Bugly'
+end
+
+# objective-c demo
+target 'DeepAdxDebug' do
+  use_frameworks!
+  project 'DeepAdxDebug/DeepAdxDebug.xcodeproj'
+  pod 'Masonry', '~> 1.1.0'
+
+  if USE_LOCAL_DEEPADX_SDK
+    pod 'DeepAdxSDK', :path => '../', :subspecs => deepadx_subspecs
+  else
+    pod 'DeepAdxSDK', deepadx_sdk_version, :subspecs => deepadx_subspecs
+  end
+
+end
+
+
+post_install do |installer|
+    installer.generated_projects.each do |project|
+          project.targets.each do |target|
+              target.build_configurations.each do |config|
+                  config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+                  # 解决沙盒权限问题
+                  config.build_settings['ENABLE_BITCODE'] = 'NO'
+                  config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
+                  config.build_settings['CODE_SIGNING_REQUIRED'] = 'NO'
+               end
+          end
+   end
+end

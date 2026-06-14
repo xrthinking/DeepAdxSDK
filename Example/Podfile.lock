@@ -1,0 +1,110 @@
+PODS:
+  - Ads-CN (6.7.0.8):
+    - Ads-CN/BUAdLive-Framework (= 6.7.0.8)
+    - Ads-CN/BUAdSDK (= 6.7.0.8)
+  - Ads-CN/BUAdLive-Framework (6.7.0.8):
+    - BUTTSDKFramework/LivePull-Lite (= 1.45.1.8-premium)
+  - Ads-CN/BUAdSDK (6.7.0.8)
+  - Ads-Global/PangleSDK (7.9.0.6)
+  - BaiduMobAdSDK (10.032)
+  - Bugly (2.6.1)
+  - BUTTSDKFramework/Core (1.45.1.8-premium)
+  - BUTTSDKFramework/LiveBase (1.45.1.8-premium):
+    - BUTTSDKFramework/Core
+    - BUTTSDKFramework/Reachability
+  - BUTTSDKFramework/LivePlayer/Base (1.45.1.8-premium):
+    - BUTTSDKFramework/Core
+    - BUTTSDKFramework/LiveBase
+    - BUTTSDKFramework/Reachability
+  - BUTTSDKFramework/LivePlayer/Lite (1.45.1.8-premium):
+    - BUTTSDKFramework/LivePlayer/Base
+    - BUTTSDKFramework/PlayerCore/LiveLite
+  - BUTTSDKFramework/LivePull-Lite (1.45.1.8-premium):
+    - BUTTSDKFramework/LivePlayer/Lite
+    - BUTTSDKFramework/Strategy/Lite
+  - BUTTSDKFramework/PlayerCore/LiveLite (1.45.1.8-premium):
+    - BUTTSDKFramework/TTFFmpeg/LiveLite
+  - BUTTSDKFramework/Reachability (1.45.1.8-premium)
+  - BUTTSDKFramework/SSL (1.45.1.8-premium)
+  - BUTTSDKFramework/Strategy/Core (1.45.1.8-premium):
+    - BUTTSDKFramework/LiveBase
+    - BUTTSDKFramework/Reachability
+  - BUTTSDKFramework/Strategy/Lite (1.45.1.8-premium):
+    - BUTTSDKFramework/LivePlayer/Lite
+    - BUTTSDKFramework/Strategy/Core
+  - BUTTSDKFramework/Tools (1.45.1.8-premium):
+    - BUTTSDKFramework/SSL
+  - BUTTSDKFramework/TTFFmpeg/Base (1.45.1.8-premium):
+    - BUTTSDKFramework/Tools
+  - BUTTSDKFramework/TTFFmpeg/LiveLite (1.45.1.8-premium):
+    - BUTTSDKFramework/TTFFmpeg/Base
+  - DeepAdxSDK/BD (2.0.1):
+    - BaiduMobAdSDK (= 10.032)
+    - DeepAdxSDK/Core
+  - DeepAdxSDK/Core (2.0.1)
+  - DeepAdxSDK/CSJ (2.0.1):
+    - Ads-CN (= 6.7.0.8)
+    - DeepAdxSDK/Core
+  - DeepAdxSDK/GDT (2.0.1):
+    - DeepAdxSDK/Core
+    - GDTMobSDK (= 4.15.80)
+  - DeepAdxSDK/GG (2.0.1):
+    - DeepAdxSDK/Core
+    - Google-Mobile-Ads-SDK (= 12.8.0)
+  - DeepAdxSDK/KS (2.0.1):
+    - DeepAdxSDK/Core
+    - KSAdSDK (= 4.12.20.3)
+  - DeepAdxSDK/PAG (2.0.1):
+    - Ads-Global/PangleSDK (= 7.9.0.6)
+    - DeepAdxSDK/Core
+  - GDTMobSDK (4.15.80)
+  - Google-Mobile-Ads-SDK (12.8.0):
+    - GoogleUserMessagingPlatform (>= 1.1)
+  - GoogleUserMessagingPlatform (3.1.0)
+  - KSAdSDK (4.12.20.3)
+  - Masonry (1.1.0)
+
+DEPENDENCIES:
+  - Bugly
+  - DeepAdxSDK/BD (from `../`)
+  - DeepAdxSDK/Core (from `../`)
+  - DeepAdxSDK/CSJ (from `../`)
+  - DeepAdxSDK/GDT (from `../`)
+  - DeepAdxSDK/GG (from `../`)
+  - DeepAdxSDK/KS (from `../`)
+  - DeepAdxSDK/PAG (from `../`)
+  - Masonry (~> 1.1.0)
+
+SPEC REPOS:
+  trunk:
+    - Ads-CN
+    - Ads-Global
+    - BaiduMobAdSDK
+    - Bugly
+    - BUTTSDKFramework
+    - GDTMobSDK
+    - Google-Mobile-Ads-SDK
+    - GoogleUserMessagingPlatform
+    - KSAdSDK
+    - Masonry
+
+EXTERNAL SOURCES:
+  DeepAdxSDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Ads-CN: 4dcb5105a7105f76bcefb246e69daf6c39db2778
+  Ads-Global: fb1fa75ebbf100ab9ff216d81b71a05cf1a73675
+  BaiduMobAdSDK: d8f9357d5d1842b4def0370d94e8ad1e1ac2c370
+  Bugly: 217ac2ce5f0f2626d43dbaa4f70764c953a26a31
+  BUTTSDKFramework: 914058900f46707f12a6e8c10e8da6ba4e891c3e
+  DeepAdxSDK: 8e35aabfd37f191f2d9fc1f0cd9948eac2001a8c
+  GDTMobSDK: 55dae2ed62505cb2ace9634f8bd7936e6be99e12
+  Google-Mobile-Ads-SDK: ece122bc89b38cab319543bc464a9ceabfe1d307
+  GoogleUserMessagingPlatform: befe603da6501006420c206222acd449bba45a9c
+  KSAdSDK: 36731149c887e5f0170c243a0ae8c5eee746ff48
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+
+PODFILE CHECKSUM: 10469c6cc06a93d9853f865564389e017c01f720
+
+COCOAPODS: 1.16.2

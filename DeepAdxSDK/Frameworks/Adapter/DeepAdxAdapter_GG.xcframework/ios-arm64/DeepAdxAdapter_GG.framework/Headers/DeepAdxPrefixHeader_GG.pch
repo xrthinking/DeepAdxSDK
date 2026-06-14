@@ -1,0 +1,13 @@
+//
+//  DeepAdxPrefixHeader_GG.pch
+//  DeepAdxAdapter_GG
+//
+//  Created by cc on 2022/4/9.
+//
+
+#ifndef DeepAdxPrefixHeader_GG_pch
+#define DeepAdxPrefixHeader_GG_pch
+
+#import "DeepAdxAdapter_GG.h"
+
+#endif /* DeepAdxPrefixHeader_GG_pch */

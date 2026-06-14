@@ -1,0 +1,6 @@
+framework module DeepAdxAdapter_PAG {
+  umbrella header "DeepAdxAdapter_PAG.h"
+  export *
+
+  module * { export * }
+}

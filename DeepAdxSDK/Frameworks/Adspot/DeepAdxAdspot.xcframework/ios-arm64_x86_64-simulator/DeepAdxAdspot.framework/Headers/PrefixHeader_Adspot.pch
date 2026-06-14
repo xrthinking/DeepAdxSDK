@@ -1,0 +1,13 @@
+//
+//  PrefixHeader_Adspot.pch
+//  DeepAdxAdspot
+//
+//  Created by cc on 2022/3/28.
+//
+
+#ifndef PrefixHeader_Adspot_pch
+#define PrefixHeader_Adspot_pch
+
+#import "DeepAdxAdspot.h"
+
+#endif /* PrefixHeader_Adspot_pch */

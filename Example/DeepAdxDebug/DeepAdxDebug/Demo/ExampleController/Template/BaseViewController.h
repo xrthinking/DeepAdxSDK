@@ -1,0 +1,44 @@
+//
+//  BaseViewController.h
+//  Example
+//
+//  Created by CherryKing on 2019/12/20.
+//  Copyright © 2019 DEEPADX. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "DemoUtils.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
+typedef enum : NSUInteger {
+    AdState_Normal,// 未加载
+    AdState_Loading,// 加载中
+    AdState_LoadSucceed,// 加载成功
+    AdState_LoadFailed,// 加载失败
+} AdState;
+
+@interface BaseViewController : UIViewController
+@property (nonatomic, assign) BOOL isOnlyLoad;
+@property (nonatomic, assign) BOOL isLoaded;
+@property (nonatomic, strong) UITextView *textV;
+
+- (void)loadAd;
+
+- (void)showAd;
+
+- (void)loadAndShowAd;
+
+- (void)deallocAd;
+
+- (void)loadAdWithState:(AdState)state;
+
+- (void)showProcessWithText:(NSString *)text;
+
+- (void)clearText;
+
+- (void)showErrorWithDescription:(NSDictionary *)description;
+- (BOOL)isDebug;
+@end
+
+NS_ASSUME_NONNULL_END

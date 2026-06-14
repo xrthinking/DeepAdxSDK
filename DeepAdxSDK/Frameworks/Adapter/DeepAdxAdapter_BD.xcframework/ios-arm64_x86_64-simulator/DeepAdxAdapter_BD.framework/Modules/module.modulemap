@@ -1,0 +1,6 @@
+framework module DeepAdxAdapter_BD {
+  umbrella header "DeepAdxAdapter_BD.h"
+  export *
+
+  module * { export * }
+}
