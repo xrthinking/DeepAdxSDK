@@ -10,7 +10,7 @@ workspace 'DeepAdxDebug.xcworkspace'
 # false：使用 CocoaPods 已发布版本（与线上接入一致）
 USE_LOCAL_DEEPADX_SDK = true
 
-deepadx_sdk_version = '1.0.6'
+deepadx_sdk_version = '1.0.7'
 deepadx_subspecs = ['Core', 'CSJ', 'GDT', 'KS', 'BD', 'GG', 'PAG']
 
 # swift demo

@@ -45,7 +45,7 @@ deepadx-ios-sdk/
 platform :ios, '12.0'
 
 # 核心模块（必选）
-pod 'DeepAdxSDK', '1.0.6'
+pod 'DeepAdxSDK', '1.0.7'
 
 # 国内渠道（按需）
 pod 'DeepAdxSDK/CSJ'   # 穿山甲
@@ -61,7 +61,7 @@ pod 'DeepAdxSDK/PAG'   # Pangle（海外穿山甲）
 也可以一次性引入多个 subspec：
 
 ```ruby
-pod 'DeepAdxSDK', '1.0.6', :subspecs => ['Core', 'CSJ', 'GDT', 'KS', 'BD', 'GG', 'PAG']
+pod 'DeepAdxSDK', '1.0.7', :subspecs => ['Core', 'CSJ', 'GDT', 'KS', 'BD', 'GG', 'PAG']
 ```
 
 执行安装：
@@ -138,7 +138,6 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // 2) 配置模型
     DeepAdxConfigModel *model = [[DeepAdxConfigModel alloc] init];
     model.debugMode = YES; // 线上请改为 NO
-    model.testDeviceIdentifiersGG = @[@"YOUR_GG_TEST_DEVICE_ID"];
 
     // 3) 注册 AppID（从平台后台获取）
     [[DeepAdxSdkConfig shareInstance] registerAppID:@"YOUR_APP_ID" withConfig:model];
@@ -358,10 +357,3 @@ cd Example
 pod install
 open DeepAdxAdsDebug.xcworkspace
 ```
-
----
-
-## 11. 相关链接
-
-- 官网：https://deepadx.com
-- 源码仓库：https://gitee.com/deepad/deepadx-ios-sdk
