@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 各渠道错误的详细原因
 @property (nonatomic, strong) NSMutableDictionary * errorDescriptions;
+/// DeepAdx 广告位 ID（后台广告单元 ID）；非空时按广告位拉取/缓存规则
+@property (nonatomic, copy, nullable) NSString *placementId;
 /// 控制器(在一次广告周期中 不可更改, 不然会引起未知错误)
 @property(nonatomic, weak) UIViewController *viewController;
 /// 初始化方法

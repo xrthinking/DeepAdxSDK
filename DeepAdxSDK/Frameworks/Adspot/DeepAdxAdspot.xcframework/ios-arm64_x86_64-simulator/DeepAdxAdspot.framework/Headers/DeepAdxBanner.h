@@ -25,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - 构造方法
 
 - (instancetype)initWithAdViewController:(nonnull UIViewController *)viewController;
+- (instancetype)initWithAdViewController:(nonnull UIViewController *)viewController
+                            placementId:(nonnull NSString *)placementId;
 
 #ifdef DEBUG
 /// 仅限于debug模式下使用

@@ -47,6 +47,9 @@ typedef enum : NSUInteger {
 
 /// 构造方法
 - (instancetype)initWithViewController:(UIViewController *)viewController;
+/// 指定 DeepAdx 广告位 ID
+- (instancetype)initWithViewController:(UIViewController *)viewController
+                          placementId:(NSString *)placementId;
 #ifdef DEBUG
 /// 构造方法
 /// 仅适用于Debug模式 Release下调用无效

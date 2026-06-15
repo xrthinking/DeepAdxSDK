@@ -92,6 +92,15 @@ isPhoneX = [UIApplication sharedApplication].getCurrentWindow.safeAreaInsets.bot
 /// 5 全部打印
 @property (nonatomic, assign) DeepAdxLogLevel level;
 
+/// 按 DeepAdx 广告位 ID 拉取过滤配置（同一类型多广告位时使用）
+- (void)fetchFilterConfigForPlacementId:(NSString *)placementId
+                                adsType:(adsType)adsType
+                                  appID:(NSString *)appID;
+
+/// 按广告类型拉取过滤配置（本地缓存缺失时主动补拉）
+- (void)fetchFilterConfigForAdsType:(adsType)adsType
+                              appID:(NSString *)appID;
+
 @end
 
 @protocol DeepAdxConsentProvider <NSObject>

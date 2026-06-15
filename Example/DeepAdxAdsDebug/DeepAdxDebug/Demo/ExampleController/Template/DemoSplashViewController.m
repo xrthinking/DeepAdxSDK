@@ -8,6 +8,7 @@
 
 #import "DemoSplashViewController.h"
 #import <DeepAdxAdspot/DeepAdxSplash.h>
+#import "DemoAdConfig.h"
 
 @interface DemoSplashViewController () <DeepAdxSplashDelegate>
 @property(strong,nonatomic) DeepAdxSplash *adSplash;
@@ -151,7 +152,8 @@
 #pragma mark - lazy
 - (DeepAdxSplash *)adSplash{
     if(!_adSplash){
-        _adSplash = [[DeepAdxSplash alloc]initWithViewController:self];
+        NSString *placementId = [DemoAdConfig placementIdForKind:DemoAdPlacementKindSplash];
+        _adSplash = [[DeepAdxSplash alloc] initWithViewController:self placementId:placementId];
         _adSplash.delegate = self;
     }
     return _adSplash;

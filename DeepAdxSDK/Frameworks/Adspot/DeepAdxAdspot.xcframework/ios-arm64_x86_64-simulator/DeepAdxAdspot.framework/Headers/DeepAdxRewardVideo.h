@@ -23,6 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) DeepAdxRewardServerParams *rewardServerParams;
 
 - (instancetype)initWithViewController:(nonnull UIViewController *)viewController;
+/// 指定 DeepAdx 广告位 ID（后台广告单元 ID）
+- (instancetype)initWithViewController:(nonnull UIViewController *)viewController
+                          placementId:(nonnull NSString *)placementId;
 #ifdef DEBUG
 /// 仅限于debug模式下使用
 - (instancetype)initWithJsonDic:(NSDictionary *)jsonDic

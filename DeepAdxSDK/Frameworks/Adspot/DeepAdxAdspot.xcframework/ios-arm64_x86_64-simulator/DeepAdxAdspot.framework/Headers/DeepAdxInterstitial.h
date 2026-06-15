@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - 构造方法
 - (instancetype)initWithViewController:(UIViewController *)viewController;
+- (instancetype)initWithViewController:(UIViewController *)viewController
+                          placementId:(NSString *)placementId;
 #ifdef DEBUG
 /// 仅限于debug模式下使用
 - (instancetype)initWithJsonDic:(NSDictionary *)jsonDic

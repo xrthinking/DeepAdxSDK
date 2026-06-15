@@ -8,6 +8,8 @@
 #import "ViewController.h"
 #import <AppTrackingTransparency/AppTrackingTransparency.h>
 #import <AdSupport/AdSupport.h>
+#import <DeepAdxCore/DeepAdxCore.h>
+#import "DemoAdConfig.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -37,7 +39,55 @@
         @{@"title":@"IDFA", @"targetVCName": @""},
     ];
     
+    [self updateTableFooterInfo];
     [_tableView reloadData];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [self updateTableFooterInfo];
+}
+
+/// 底部信息区：SDK 版本、国内/海外、App ID、切换说明
+- (void)updateTableFooterInfo {
+    CGFloat width = CGRectGetWidth(self.tableView.bounds);
+    if (width <= 0) {
+        width = CGRectGetWidth(self.view.bounds);
+    }
+    if (width <= 0) {
+        return;
+    }
+
+    NSString *infoText = [NSString stringWithFormat:
+                          @"SDK 版本：%@\n"
+                          @"当前地区：%@\n"
+                          @"App ID：%@\n"
+                          @"\n"
+                          @"如何切换国内 / 海外：\n"
+                          @"设置 → 通用 → 语言与地区 → 地区\n"
+                          @"选择「中国大陆」= 国内，其他地区 = 海外\n"
+                          @"修改地区后请完全退出并重新打开 App",
+                          [DeepAdxSdkConfig sdkVersion],
+                          [DemoAdConfig regionDescription],
+                          [DemoAdConfig appId]];
+
+    UILabel *label = [[UILabel alloc] init];
+    label.numberOfLines = 0;
+    label.font = [UIFont systemFontOfSize:12];
+    if (@available(iOS 13.0, *)) {
+        label.textColor = [UIColor secondaryLabelColor];
+    } else {
+        label.textColor = [UIColor grayColor];
+    }
+    label.text = infoText;
+
+    CGFloat horizontalPadding = 16.f;
+    CGFloat verticalPadding = 20.f;
+    CGSize textSize = [label sizeThatFits:CGSizeMake(width - horizontalPadding * 2, CGFLOAT_MAX)];
+    UIView *footer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, textSize.height + verticalPadding * 2)];
+    label.frame = CGRectMake(horizontalPadding, verticalPadding, width - horizontalPadding * 2, textSize.height);
+    [footer addSubview:label];
+    self.tableView.tableFooterView = footer;
 }
 
 - (void)initSubviews {
@@ -45,7 +95,6 @@
     _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     _tableView.dataSource = self;
     _tableView.delegate = self;
-    _tableView.tableFooterView = [UIView new];
     [self.view addSubview:_tableView];
     _tableView.backgroundView = [UIView new];
     

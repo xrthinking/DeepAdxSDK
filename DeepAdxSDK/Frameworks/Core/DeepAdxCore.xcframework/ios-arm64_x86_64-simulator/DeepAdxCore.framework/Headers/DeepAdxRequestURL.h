@@ -12,11 +12,13 @@
 
 #define BaseURL         @"https://sdk.deepadx.com"        // 广告配置接口API
 #define BaseURLOSS      @"https://oss.deepadx.com"        // 广告配置兜底OSS
+#define BaseURLOSS_PATH_PREFIX @"ad_default_config"     // OSS 对象路径前缀
 
 #else
 
 #define BaseURL         @"https://sdk.deepadx.com"        // 广告配置接口API
 #define BaseURLOSS      @"https://oss.deepadx.com"        // 广告配置兜底OSS
+#define BaseURLOSS_PATH_PREFIX @"ad_default_config"     // OSS 对象路径前缀
 
 #endif
 

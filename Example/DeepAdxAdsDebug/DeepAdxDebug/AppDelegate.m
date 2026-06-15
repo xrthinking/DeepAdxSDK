@@ -11,6 +11,7 @@
 #import <AdSupport/AdSupport.h>
 #import "ViewController.h"
 #import "DemoSplashViewController.h"
+#import "DemoAdConfig.h"
 
 @interface AppDelegate ()
 @property (nonatomic, assign) BOOL hasRequestedTracking;
@@ -20,7 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-//    self.isDebug = YES;
+    self.isDebug = YES;
     [self settingDeepAdx];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
@@ -33,18 +34,16 @@
 - (void)settingDeepAdx {
     [DeepAdxSdkConfig shareInstance].level = DeepAdxLogLevel_Debug;
     DeepAdxConfigModel * model = [[DeepAdxConfigModel alloc]init];
-//#ifdef DEBUG
-//    model.debugMode = YES;
-//#else
     model.debugMode = YES;
     model.testDeviceIdentifiersGG = @[ @"DB161DFE-9AAC-4AEC-9865-25D3CE848935" ];
-//    model.enableGoogleUMPConsent = YES;
-//#endif
-    // 国内测试：a06460e31fce62fa
-    // 国外测试：e3aa00b33d0927ec
-    // 正式-iOS(国内)：1375ce71c7894b24
-    // 正式-iOS(海外)：6b1c8048fdc01e0b
-    [[DeepAdxSdkConfig shareInstance] registerAppID:@"a06460e31fce62fa" withConfig:model];
+    // 按设备地区标记是否中国大陆，供 SDK 内部逻辑使用
+    model.isCN = [DemoAdConfig isMainlandChina];
+
+    NSString *appId = [DemoAdConfig appId];
+    [[DeepAdxSdkConfig shareInstance] registerAppID:appId withConfig:model];
+    // 按 placementId 预拉当前地区（国内/海外）全部广告位策略
+    [DemoAdConfig prefetchCurrentRegionConfigs];
+    NSLog(@"[DeepAdxDebug] SDK 初始化完成 region=%@ appId=%@", [DemoAdConfig regionDescription], appId);
 }
 
 // 获取IDFA权限

@@ -8,6 +8,7 @@
 #import "DemoListFeedExpressViewController.h"
 #import <DeepAdxAdspot/DeepAdxNativeExpress.h>
 #import <DeepAdxAdspot/DeepAdxNativeExpressView.h>
+#import "DemoAdConfig.h"
 
 @interface DemoListFeedExpressViewController ()<UITableViewDelegate, UITableViewDataSource, DeepAdxNativeExpressDelegate> {
     BOOL _isLoadAndShow;
@@ -235,7 +236,10 @@
 #pragma mark - lazy
 - (DeepAdxNativeExpress *)advanceFeed{
     if(!_advanceFeed){
-        _advanceFeed = [[DeepAdxNativeExpress alloc] initWithViewController:self adSize:CGSizeMake(self.view.bounds.size.width, 0)];
+        NSString *placementId = [DemoAdConfig placementIdForKind:DemoAdPlacementKindNative];
+        _advanceFeed = [[DeepAdxNativeExpress alloc] initWithViewController:self
+                                                                    adSize:CGSizeMake(self.view.bounds.size.width, 0)
+                                                               placementId:placementId];
         _advanceFeed.delegate = self;
     }
     return _advanceFeed;

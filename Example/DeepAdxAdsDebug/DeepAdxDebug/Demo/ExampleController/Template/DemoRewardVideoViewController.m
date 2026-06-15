@@ -9,6 +9,7 @@
 #import "DemoRewardVideoViewController.h"
 
 #import <DeepAdxAdspot/DeepAdxRewardVideo.h>
+#import "DemoAdConfig.h"
 @interface DemoRewardVideoViewController () <DeepAdxRewardVideoDelegate>
 @property (nonatomic, strong) DeepAdxRewardVideo *adRewardVideo;
 @property (nonatomic) bool isAdLoaded;
@@ -153,7 +154,8 @@
 #pragma mark - lazy
 - (DeepAdxRewardVideo *)adRewardVideo{
     if(!_adRewardVideo){
-        _adRewardVideo = [[DeepAdxRewardVideo alloc] initWithViewController:self];
+        NSString *placementId = [DemoAdConfig placementIdForKind:DemoAdPlacementKindRewardVideo];
+        _adRewardVideo = [[DeepAdxRewardVideo alloc] initWithViewController:self placementId:placementId];
         _adRewardVideo.delegate = self;
         _adRewardVideo.rewardServerParams.userId = @"100001";
         _adRewardVideo.rewardServerParams.extra = @"哈哈哈";

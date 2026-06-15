@@ -8,6 +8,7 @@
 
 #import "DemoInterstitialViewController.h"
 #import <DeepAdxAdspot/DeepAdxInterstitial.h>
+#import "DemoAdConfig.h"
 @interface DemoInterstitialViewController () <DeepAdxInterstitialDelegate>
 @property (nonatomic, strong) DeepAdxInterstitial *adInterstitial;
 @property (nonatomic) bool isAdLoaded;
@@ -119,7 +120,8 @@
 #pragma mark - lazy
 - (DeepAdxInterstitial *)adInterstitial{
     if(!_adInterstitial){
-        _adInterstitial = [[DeepAdxInterstitial alloc] initWithViewController:self];
+        NSString *placementId = [DemoAdConfig placementIdForKind:DemoAdPlacementKindInterstitial];
+        _adInterstitial = [[DeepAdxInterstitial alloc] initWithViewController:self placementId:placementId];
         _adInterstitial.delegate = self;
     }
     return _adInterstitial;

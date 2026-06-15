@@ -45,7 +45,7 @@ deepadx-ios-sdk/
 platform :ios, '12.0'
 
 # 核心模块（必选）
-pod 'DeepAdxSDK', '1.0.7'
+pod 'DeepAdxSDK', '1.0.10'
 
 # 国内渠道（按需）
 pod 'DeepAdxSDK/CSJ'   # 穿山甲
@@ -61,7 +61,7 @@ pod 'DeepAdxSDK/PAG'   # Pangle（海外穿山甲）
 也可以一次性引入多个 subspec：
 
 ```ruby
-pod 'DeepAdxSDK', '1.0.7', :subspecs => ['Core', 'CSJ', 'GDT', 'KS', 'BD', 'GG', 'PAG']
+pod 'DeepAdxSDK', '1.0.10', :subspecs => ['Core', 'CSJ', 'GDT', 'KS', 'BD', 'GG', 'PAG']
 ```
 
 执行安装：

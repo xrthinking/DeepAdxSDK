@@ -5,6 +5,7 @@
 
 #import "DemoBannerViewController.h"
 #import <DeepAdxAdspot/DeepAdxBanner.h>
+#import "DemoAdConfig.h"
 
 @interface DemoBannerViewController () <DeepAdxBannerDelegate>
 @property (nonatomic, strong) DeepAdxBanner *adBanner;
@@ -111,8 +112,8 @@
 #pragma mark - lazy
 - (DeepAdxBanner *)adBanner{
     if(!_adBanner){
-        _adBanner = [[DeepAdxBanner alloc] initWithAdViewController:self];
-//        _adBanner.y = 300;
+        NSString *placementId = [DemoAdConfig placementIdForKind:DemoAdPlacementKindBanner];
+        _adBanner = [[DeepAdxBanner alloc] initWithAdViewController:self placementId:placementId];
         _adBanner.delegate = self;
         _adBanner.adContainer = self.bannerContainer;
     }

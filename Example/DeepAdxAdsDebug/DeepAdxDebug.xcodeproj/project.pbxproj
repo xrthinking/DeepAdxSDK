@@ -21,6 +21,7 @@
 		4215A7B6283C881B00E322D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4215A7B4283C881B00E322D7 /* LaunchScreen.storyboard */; };
 		4215A7B9283C881B00E322D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4215A7B8283C881B00E322D7 /* main.m */; };
 		4215AC3E283CCF1000E322D7 /* DemoUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4215ABE3283CCF1000E322D7 /* DemoUtils.m */; };
+		D3M0ADCF1G0001000E322D7 /* DemoAdConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D3M0ADCF1G0002000E322D7 /* DemoAdConfig.m */; };
 		4215AC3F283CCF1000E322D7 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4215ABE6283CCF1000E322D7 /* BaseViewController.m */; };
 		4215AC40283CCF1000E322D7 /* DemoSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4215ABEB283CCF1000E322D7 /* DemoSplashViewController.m */; };
 		4215AC41283CCF1000E322D7 /* DemoRewardVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4215ABEF283CCF1000E322D7 /* DemoRewardVideoViewController.m */; };
@@ -57,6 +58,8 @@
 		4215A7B8283C881B00E322D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4215ABE3283CCF1000E322D7 /* DemoUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoUtils.m; sourceTree = "<group>"; };
 		4215ABE4283CCF1000E322D7 /* DemoUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoUtils.h; sourceTree = "<group>"; };
+		D3M0ADCF1G0002000E322D7 /* DemoAdConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoAdConfig.m; sourceTree = "<group>"; };
+		D3M0ADCF1G0003000E322D7 /* DemoAdConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoAdConfig.h; sourceTree = "<group>"; };
 		4215ABE6283CCF1000E322D7 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		4215ABE7283CCF1000E322D7 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		4215ABEB283CCF1000E322D7 /* DemoSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoSplashViewController.m; sourceTree = "<group>"; };
@@ -193,6 +196,8 @@
 			children = (
 				4215ABE4283CCF1000E322D7 /* DemoUtils.h */,
 				4215ABE3283CCF1000E322D7 /* DemoUtils.m */,
+				D3M0ADCF1G0003000E322D7 /* DemoAdConfig.h */,
+				D3M0ADCF1G0002000E322D7 /* DemoAdConfig.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -350,6 +355,7 @@
 				4215A7B9283C881B00E322D7 /* main.m in Sources */,
 				4224C1C528BDF60D0062AA28 /* DemoListFeedExpressViewController.m in Sources */,
 				4215AC3E283CCF1000E322D7 /* DemoUtils.m in Sources */,
+				D3M0ADCF1G0001000E322D7 /* DemoAdConfig.m in Sources */,
 				4215AC40283CCF1000E322D7 /* DemoSplashViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
