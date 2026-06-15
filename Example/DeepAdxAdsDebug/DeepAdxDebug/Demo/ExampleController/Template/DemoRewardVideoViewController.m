@@ -26,6 +26,9 @@
     [super loadAd];
     [self deallocAd];
     [self loadAdWithState:AdState_Normal];
+    if ([self showToastIfAdUnavailable:self.adRewardVideo]) {
+        return;
+    }
     [self.adRewardVideo loadAd];
     [self loadAdWithState:AdState_Loading];
 }
@@ -42,6 +45,9 @@
     [super loadAd];
     [self deallocAd];
     [self loadAdWithState:AdState_Normal];
+    if ([self showToastIfAdUnavailable:self.adRewardVideo]) {
+        return;
+    }
     [self.adRewardVideo loadAndShowAd];
     [self loadAdWithState:AdState_Loading];
 }

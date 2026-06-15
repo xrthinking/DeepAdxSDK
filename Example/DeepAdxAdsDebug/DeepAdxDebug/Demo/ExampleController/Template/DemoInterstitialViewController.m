@@ -27,6 +27,9 @@
     [self deallocAd];
     [self loadAdWithState:AdState_Normal];
     _isAdLoaded=false;
+    if ([self showToastIfAdUnavailable:self.adInterstitial]) {
+        return;
+    }
     [self.adInterstitial loadAd];
     [self loadAdWithState:AdState_Loading];
 }
@@ -43,6 +46,9 @@
     [super loadAndShowAd];
     [self loadAdWithState:AdState_Normal];
     _isAdLoaded=false;
+    if ([self showToastIfAdUnavailable:self.adInterstitial]) {
+        return;
+    }
     [self.adInterstitial loadAndShowAd];
     [self loadAdWithState:AdState_Loading];
 }

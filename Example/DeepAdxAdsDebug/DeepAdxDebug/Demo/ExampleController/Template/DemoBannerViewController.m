@@ -38,6 +38,9 @@
 
 - (void)loadAndShowAd{
     [super loadAndShowAd];
+    if ([self showToastIfAdUnavailable:self.adBanner]) {
+        return;
+    }
     [self loadAdWithState:AdState_Normal];
     [self.adBanner loadAndShowAd];
     [self loadAdWithState:AdState_Loading];

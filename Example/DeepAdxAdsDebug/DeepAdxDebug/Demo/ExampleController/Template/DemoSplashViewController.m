@@ -45,6 +45,9 @@
     [self deallocAd];
     [self loadAdWithState:AdState_Normal];
     self.autoShowOnLoadSuccess = YES;
+    if ([self showToastIfAdUnavailable:self.adSplash]) {
+        return;
+    }
     [self.adSplash loadAd];
     [self loadAdWithState:AdState_Loading];
 }
@@ -62,6 +65,9 @@
     [self deallocAd];
     [self loadAdWithState:AdState_Normal];
     self.autoShowOnLoadSuccess = NO;
+    if ([self showToastIfAdUnavailable:self.adSplash]) {
+        return;
+    }
     [self.adSplash loadAndShowAd];
     [self loadAdWithState:AdState_Loading];
 }

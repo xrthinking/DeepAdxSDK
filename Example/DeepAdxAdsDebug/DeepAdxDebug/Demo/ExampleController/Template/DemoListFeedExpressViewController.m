@@ -49,6 +49,9 @@
     [self loadAdWithState:AdState_Normal];
     _isLoadAndShow = NO;
     self.dataArrM = [NSMutableArray array];
+    if ([self showToastIfAdUnavailable:self.advanceFeed]) {
+        return;
+    }
     [self.advanceFeed loadAd];
     [self loadAdWithState:AdState_Loading];
 }
@@ -66,6 +69,9 @@
     [self loadAdWithState:AdState_Normal];
     _isLoadAndShow = YES;
     self.dataArrM = [NSMutableArray array];
+    if ([self showToastIfAdUnavailable:self.advanceFeed]) {
+        return;
+    }
     [self.advanceFeed loadAndShowAd];
     [self loadAdWithState:AdState_Loading];
 }

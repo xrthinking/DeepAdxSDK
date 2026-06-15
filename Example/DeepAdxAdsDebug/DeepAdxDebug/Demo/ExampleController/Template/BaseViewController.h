@@ -39,6 +39,10 @@ typedef enum : NSUInteger {
 
 - (void)showErrorWithDescription:(NSDictionary *)description;
 - (BOOL)isDebug;
+
+/// 广告对象因本地策略未就绪而为 nil 时弹出 Toast，返回 YES 表示已拦截
+- (BOOL)showToastIfAdUnavailable:(id)adObject;
+
 @end
 
 NS_ASSUME_NONNULL_END

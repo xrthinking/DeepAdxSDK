@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "DeepAdxSDK"
-  spec.version      = "1.0.10"
+  spec.version      = "1.0.11"
   spec.ios.deployment_target = '12.0'
   spec.platform     = :ios, "12.0"
   spec.swift_versions = ['5.0', '5.1', '5.2', '5.3', '5.4', '5.5', '5.6', '5.7', '5.8', '5.9']

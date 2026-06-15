@@ -18,7 +18,8 @@
 
 @property (nonatomic, strong) UIImageView *logoImgV;
 @property (nonatomic, strong) UILabel *idfaLab;
-
+/// 缓存上次 footer 宽度，避免 viewDidLayoutSubviews 重复重建
+@property (nonatomic, assign) CGFloat lastFooterWidth;
 
 @end
 
@@ -57,6 +58,11 @@
     if (width <= 0) {
         return;
     }
+    // 宽度未变化且已有 footer 时跳过重建
+    if (self.tableView.tableFooterView && fabs(width - self.lastFooterWidth) < 0.5) {
+        return;
+    }
+    self.lastFooterWidth = width;
 
     NSString *infoText = [NSString stringWithFormat:
                           @"SDK 版本：%@\n"

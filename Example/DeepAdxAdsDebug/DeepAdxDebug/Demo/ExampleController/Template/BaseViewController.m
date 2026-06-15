@@ -93,6 +93,15 @@
     self.textV.text = nil;
 }
 
+/// 策略异步拉取未完成时广告 init 可能为 nil，统一提示用户稍后重试
+- (BOOL)showToastIfAdUnavailable:(id)adObject {
+    if (adObject) {
+        return NO;
+    }
+    [DemoUtils showToast:@"广告策略加载中，请稍后再试"];
+    return YES;
+}
+
 - (void)loadAdWithState:(AdState)state {
     switch (state) {
         case AdState_Normal:
